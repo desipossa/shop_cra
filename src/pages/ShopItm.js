@@ -7,7 +7,7 @@ const ShopItm = ({ shopItm }) => {
 
     return (
         <>
-            <div>{console.log(matchId, shopItm, id)}</div>
+            {/* <div>{console.log(matchId, shopItm, id)}</div> */}
             <div>
                 {
                     !matchId ? <div>로딩중 ...</div>

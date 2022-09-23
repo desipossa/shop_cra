@@ -23,7 +23,6 @@ const App = () => {
   return (
     <>
       <Header />
-      {console.log(shopItm)}
       <Routes>
         <Route path='/' element={<ShopList shopItm={shopItm} />} />
         <Route path='/list/:id' element={<ShopItm shopItm={shopItm} />} />
