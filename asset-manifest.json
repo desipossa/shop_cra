@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shop_spa/static/css/main.5ac30cd6.css",
+    "main.js": "/shop_spa/static/js/main.eb8f9a2b.js",
+    "static/js/787.26ab9369.chunk.js": "/shop_spa/static/js/787.26ab9369.chunk.js",
+    "index.html": "/shop_spa/index.html",
+    "main.5ac30cd6.css.map": "/shop_spa/static/css/main.5ac30cd6.css.map",
+    "main.eb8f9a2b.js.map": "/shop_spa/static/js/main.eb8f9a2b.js.map",
+    "787.26ab9369.chunk.js.map": "/shop_spa/static/js/787.26ab9369.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ac30cd6.css",
+    "static/js/main.eb8f9a2b.js"
+  ]
+}
