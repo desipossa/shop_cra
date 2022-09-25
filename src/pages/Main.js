@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Main = () => {
+const Main = ({ num }) => {
     return (
-        <div>Main</div>
+        <div>
+            {console.log(num ? num[0] : '아직')}
+        </div>
     )
 }
 

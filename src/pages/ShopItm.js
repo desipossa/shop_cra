@@ -10,8 +10,11 @@ const ShopItm = ({ shopItm }) => {
             {/* <div>{console.log(matchId, shopItm, id)}</div> */}
             <div>
                 {
-                    !matchId ? <div>로딩중 ...</div>
-                        : <div>{matchId.name}</div>
+                    matchId ? <div>
+                        <img src={matchId.img} />
+                        {matchId.name}
+                    </div>
+                        : <div>로딩중 ...</div>
                 }
             </div>
         </>

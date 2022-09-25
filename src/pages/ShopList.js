@@ -5,7 +5,12 @@ const ShopList = ({ shopItm }) => {
     return (
         <div>
             {
-                shopItm.map(itm => <li><Link to={'/list/' + itm.id}>{itm.name}</Link></li>)
+                shopItm ?
+
+                    <div>{shopItm.map(itm => <li><Link to={'/list/' + itm.id}>{itm.name}</Link></li>)}</div>
+                    :
+                    <div>Loading...</div>
+
             }
         </div>
     )

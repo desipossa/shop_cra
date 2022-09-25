@@ -10,14 +10,25 @@ import ShopList from './pages/ShopList'
 
 const App = () => {
 
-  const [shopItm, setShopItm] = useState([]);
+  const [shopItm, setShopItm] = useState();
   useEffect(() => {
-    const url = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+    const url = 'https://makeup-api.herokuapp.com/api/v1/products.json';
     const getShopItem = async () => {
       const res = await axios.get(url);
-      setShopItm(res.data);
+      const mydata = res.data.slice(0, 100).map(
+        it => {
+          return {
+            id: it.id,
+            name: it.name,
+            brend: it.brand,
+            img: it.image_link,
+          }
+        }
+      )
+      setShopItm(mydata);
     }
     getShopItem();
+
   }, [])
 
   return (
@@ -25,8 +36,13 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<ShopList shopItm={shopItm} />} />
-        <Route path='/list/:id' element={<ShopItm shopItm={shopItm} />} />
+        {
+          shopItm ? <Route path='/list/:id' element={<ShopItm shopItm={shopItm} />} />
+            : <Route path='/list/:id' element={<div> Loading .... </div>} />
+        }
+
       </Routes>
+      {console.log(shopItm)}
       {/* <ShopList shopItm={shopItm} /> */}
 
       <Customer />
